@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-json-server",
+  "version": "0.0.1",
+  "description": "Armaremos un pequeño servidor con informacion de cursos",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "json-server --watch db.json",
+    "ruteo-frontend": "nodemon backend/server.js",
+    "todo":"concurrently \"npm run ruteo-frontend\" \"npm run start\""
+    
+  },
+  "author": "Serge",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "json-server": "^1.0.0-beta.15"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3",
+    "nodemon": "^3.1.14"
+  }
+}

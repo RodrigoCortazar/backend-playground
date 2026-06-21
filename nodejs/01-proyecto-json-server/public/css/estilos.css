@@ -1,0 +1,56 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+body{
+    background-color:black;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(46, 37, 9, 1) 50%, rgba(0, 0, 0, 1) 100%);
+
+}
+
+h1,h2,p{
+    color:white
+}
+
+
+.contenedor-botones{
+    /*border:1px solid white;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.contenido{
+    margin-top: 20px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#img-animal{
+
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
+    border-radius: 60px;
+    overflow: hidden;
+}
+
+button{
+    padding: 8px 10px;
+    background-color: #fffc55;
+    border:none;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.btn-presionado{
+    
+}

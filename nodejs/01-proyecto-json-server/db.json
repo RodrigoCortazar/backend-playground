@@ -1,0 +1,20 @@
+{
+  "animales": [
+    {
+      "nombre": "Perro",
+      "url_imagen": "img/perro.jpg",
+      "descripcion": "El perro es uno de los animales domésticos más leales y cercanos al ser humano. Se caracteriza por su gran capacidad de aprendizaje, su obediencia cuando es entrenado correctamente y su fuerte vínculo emocional con las personas. Existen muchas razas con diferentes tamaños, temperamentos y habilidades, lo que los hace adaptables a distintos entornos y estilos de vida. Son comúnmente utilizados como animales de compañía, de trabajo y de servicio."
+    },
+    {
+      "nombre": "Gato",
+      "url_imagen": "img/gato.jpg",
+      "descripcion": "El gato es un animal doméstico conocido por su independencia, agilidad y comportamiento curioso. Aunque puede ser muy afectuoso con sus dueños, también disfruta de su espacio y tiempo a solas. Son excelentes cazadores por naturaleza y poseen sentidos muy desarrollados, especialmente la vista y el oído. Los gatos han convivido con los humanos durante miles de años y son una de las mascotas más populares en el mundo."
+    },
+    {
+      "nombre": "Conejo",
+      "url_imagen": "img/conejo.jpg",
+      "descripcion": "El conejo es un mamífero pequeño herbívoro que se caracteriza por sus largas orejas, su gran capacidad de reproducción y su comportamiento tranquilo. Son animales muy sensibles que requieren cuidados adecuados, una dieta balanceada y un entorno seguro. Aunque parecen simples, los conejos pueden reconocer a sus dueños y desarrollar vínculos afectivos. Son populares como mascotas debido a su ternura y comportamiento pacífico."
+    }
+  ]
+}
+
