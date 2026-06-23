@@ -1,0 +1,21 @@
+{
+  "name": "03-proyecto-crud",
+  "version": "0.0.1",
+  "description": "Crud con nodejs y mongodb",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js",
+    "start": "node src/app.js"
+  },
+  "author": "Rod",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^8.24.1"
+  }
+}
