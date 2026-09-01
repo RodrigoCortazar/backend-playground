@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de pizzas</title>
+</head>
+<body>
+    <style>
+        html,body{
+            width: 100%; height: 100%; background-color: black;
+            color: white; font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            Color:white; font-family: 'Courier New', Courier, monospace;
+        }
+        a{
+            color: yellow;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    </style>
+    <h1>API - Servicio de pizzas</h1>
+    <div>
+        <h2>Endpoints:</h2>
+        <ol>
+            <li><a href="http://127.0.0.1:<%= port%>/api/v1/pizzas">/api/v1/pizzas</a></li>
+            <li><a href="http://127.0.0.1:<%= port%>/api/v1/tamanios">/api/v1/tamanios</a></li>
+            <li><a href="http://127.0.0.1:<%= port%>/api/v1/bebidas">/api/v1/bebidas</a></li>
+        </ol>
+    </div>
+</body>
+</html>
