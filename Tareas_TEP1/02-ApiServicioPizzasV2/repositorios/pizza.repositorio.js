@@ -44,5 +44,6 @@ export async function actualizarPizzaAsync(id,pizza){
 }
 
 export async function eliminarPizzaAsync(id,pizza){
-    const index = pizzas.findIndex(x=>x.id=id)
+    const index = pizzas.findIndex(x=>x.id==id)
+    pizzas.splice(index,1)
 }

@@ -24,14 +24,18 @@ Endpoints usados:
 
 ![HOme](screenshots/get.gif)
 
-### POST
-
-En desarroyo...
-
 ### DELETE
 
-En desarroyo...
+Endpoints usados:
+
+- Con id: `/api/v1/pizzas/<idNumerico>`
+
+![HOme](screenshots/delete.gif)
 
 ### PUT
+
+En desarroyo...
+
+### POST
 
 En desarroyo...

@@ -101,6 +101,16 @@ const metodoPost = () => {
 
 const metodoDelete = () => {
     console.log("delete")
+    console.log(inpId.value)
+    fetch(`${api}/${inpId.value}`, {method: "DELETE"})
+        .then(res=>{
+            return res.json()
+        })
+        .then(data=>{
+            console.log("datos: ",data)
+            txa_respuesta.value=JSON.stringify(data)
+            
+        })
 }
 const metodoPut = () => {
     console.log("put")

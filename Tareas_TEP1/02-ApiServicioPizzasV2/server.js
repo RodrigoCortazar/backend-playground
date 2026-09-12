@@ -2,7 +2,7 @@ import express from "express"
 import cors from "cors"
 import path from "path";
 import { fileURLToPath } from "url";
-import {obtenerTodasLasPizzasAsync,obtenerPizzaPorIdAsync,pizzas} from "./repositorios/pizza.repositorio.js"
+import {obtenerTodasLasPizzasAsync,obtenerPizzaPorIdAsync,pizzas, eliminarPizzaAsync} from "./repositorios/pizza.repositorio.js"
 import { type } from "os";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -59,6 +59,18 @@ app.get("/api/v1/pizzas/:id",async(req,res)=>{
     }
     console.log(pizzaid)
     res.status(200).json(pizzaid)
+})
+
+app.delete("/api/v1/pizzas/:id",async(req,res)=>{
+    let id = req.params.id
+    console.log(id)
+    let pizzaid = await obtenerPizzaPorIdAsync(id)
+    if(pizzaid==undefined){
+        res.status(500).json({message:"Error -> El id dado no corresponde a ninguna pizza."})
+    }else{
+        let m = await eliminarPizzaAsync(id,pizzaid)
+        res.json({message:"Elemento eliminado"})
+    }
 })
 
 app.listen(PORT,()=>{
