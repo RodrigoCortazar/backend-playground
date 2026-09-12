@@ -22,7 +22,7 @@ Endpoints usados:
 - Sin id: `/api/v1/pizzas`
 - Con id: `/api/v1/pizzas/<idNumerico>`
 
-![HOme](screenshots/get.gif)
+![get](screenshots/get.gif)
 
 ### DELETE
 
@@ -30,7 +30,7 @@ Endpoints usados:
 
 - Con id: `/api/v1/pizzas/<idNumerico>`
 
-![HOme](screenshots/delete.gif)
+![delete](screenshots/delete.gif)
 
 ### PUT
 
@@ -38,4 +38,8 @@ En desarroyo...
 
 ### POST
 
-En desarroyo...
+Endpoints usados:
+
+- Con id: `/api/v1/pizzas`
+
+![post](screenshots/post.gif)

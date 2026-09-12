@@ -2,7 +2,7 @@
 
 // Simulacion retardo:
 let sleep = (ms) => new Promise((resolve)=>setTimeout(resolve,ms))
-
+let contadorId=4
 export let pizzas = [
     {id:1,nombre:"Hawaina",descripcion:"Jamon y piña"},
     {id:2,nombre:"Pepperoni",descripcion:"Pepperoni y tomate"},
@@ -27,8 +27,10 @@ export async function obtenerPizzaPorIdAsync(id){
 
 export async function agregarPizzaAsync(pizza){
     await sleep(1000)
+    contadorId=contadorId+1
+    pizza["id"]= contadorId
     pizzas.push(pizza)
-    return pizza.length
+    return  contadorId
 }
 
 

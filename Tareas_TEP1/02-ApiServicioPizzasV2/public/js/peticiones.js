@@ -20,6 +20,7 @@ const setearInputs = () => {
         case "POST":
             inpId.disabled=true;
             txa_solicitud.disabled=false;
+            txa_solicitud.value='{"nombre":"<nombrePizza>","descripcion":"<desc>"}'
             break;
         case "DELETE":
             inpId.disabled=false;
@@ -42,9 +43,9 @@ document.querySelectorAll('input[name="metodo"]').forEach(e=>{
 
 const realizarPeticion = () => {
     const metodo = document.querySelector('input[name="metodo"]:checked')
-    // console.log("VAlor metodo: ",metodo.value)
-    // console.log("valor:",txa_solicitud.value)
-    // console.log("metodo -> realizarPeticion")
+    console.log("VAlor metodo: ",metodo.value)
+    console.log("valor:",txa_solicitud.value)
+    console.log("metodo -> realizarPeticion")
     switch(metodo.value){
         case "GETID":
             metodoGetConId();
@@ -53,6 +54,7 @@ const realizarPeticion = () => {
             metodoGet();
             break;
         case "POST":
+            
             metodoPost();
             break;
         case "DELETE":
@@ -97,6 +99,16 @@ const metodoGetConId = () => {
 
 const metodoPost = () => {
     console.log("post")
+    console.log(inpId.value)
+    fetch(`${api}`, {method: "POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(JSON.parse(txa_solicitud.value))})
+        .then(res=>{
+            return res.json()
+        })
+        .then(data=>{
+            console.log("datos: ",data)
+            txa_respuesta.value=JSON.stringify(data)
+            
+        }).catch(error => console.error(error))
 }
 
 const metodoDelete = () => {
