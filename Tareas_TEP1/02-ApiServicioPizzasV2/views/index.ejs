@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api Pizzas V2</title>
+    <link rel="stylesheet" href="/css/estilos.css">
+    <!--<link rel="stylesheet" href="/public/css/estilos.css">-->
+</head>
+<body>
+    <h1>Api - Servicio de pizzas v2</h1>
+
+
+
+    <div class="contenedor">
+        <div class="contenedor-api" style="display:inline-block">
+            API: /api/v1/pizzas
+        </div>
+        <br>
+        <div class="contenedor-metodos">
+            <label> METODO:</label>
+            <label>
+                <input class="imetodo" type="radio" name="metodo" value="GET" checked>
+                GET 
+            </label>
+            <label>
+                <input class="imetodo" type="radio" name="metodo" value="GETID">
+                GET+Id 
+            </label>
+            <label>
+                <input class="imetodo" type="radio" name="metodo" value="POST">
+                POST 
+            </label>
+            <label>
+                <input class="imetodo" type="radio" name="metodo" value="DELETE">
+                DELETE 
+            </label>
+            <label>
+                <input class="imetodo" type="radio" name="metodo" value="PUT">
+                PUT 
+            </label>
+        </div>
+        <div class="contenedor-id">
+                <label>ID:</label>
+                <input id="inp-id" type="text" value="3">
+        </div>
+        <button id="btn-enviar" >ENVIAR</button>
+        <div class="contenedor-json" >
+            <textarea id="txa_solicitud" disabled>
+
+            </textarea>
+        </div>
+
+        <div class="contenedor-respuesta">
+
+            <h3 id="h-respuesta">Respuesta</h3>
+            <textarea disabled id="txa-respuesta">...</textarea>
+        </div>
+        
+        
+    </div>
+
+    <script src="/js/peticiones.js"></script>
+</body>
+</html>
