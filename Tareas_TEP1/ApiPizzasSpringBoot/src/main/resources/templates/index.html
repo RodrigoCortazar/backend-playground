@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    Frontend en desarroyo...
+    <h1>API PIZZAS EN SPRING BOOT V1</h1>
+    <div class="contenedor-principal">
+        <div class="getAllPizzas">
+            <button id="btn-get-pizzas" >Obtener Pizzas</button>
+            <div class="pizza-container"  id="pizza-container">
+            </div>
+        </div>
+        <!---->
+        <div class="getById">
+            <form id="form-id">
+                <button id="btn-get-pizzas-id" >Obtener Pizza</button>
+                <label>ID:</label>
+                <input id="inp-id" type="text" placeholder="Id" required >
+            </form>
+            <div class="pizza-container-id tarjeta-pizza"  id="pizza-container-id" style="display: none" >
+
+            </div>
+        </div>
+        <!---->
+        <div class="delete-pizza">
+            <form id="form-id-delete">
+                <button id="btn-delete" disabled style="background: dimgray">Eliminar Pizza</button>
+                <label>ID:</label>
+                <input id="inp-id-delete" type="text" placeholder="Seccion en desarroyo" required disabled>
+            </form>
+        </div>
+        <!---->
+        <div class="create-pizza">
+            <form id="form-create">
+                <button id="btn-create" disabled style="background: dimgray">Crear Pizza</button>
+            </form>
+        </div>
+        <!---->
+        <div class="update-pizza">
+            <form id="form-update">
+                <button id="btn-update" disabled style="background: dimgray">Actualizar Pizza</button>
+            </form>
+        </div>
+
+    </div>
+    <script th:src="@{/js/script.js}"></script>
+</body>
+</html>

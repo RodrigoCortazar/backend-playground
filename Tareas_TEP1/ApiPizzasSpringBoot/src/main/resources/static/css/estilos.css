@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+
+}
+
+
+
+h1{
+    margin:30px;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+#btn-get-pizzas,#btn-get-pizzas-id,#btn-delete,#btn-create,#btn-update{
+    margin: 10px 0 20px 0;
+    padding: 14px 12px;
+    font-size: 20px;
+    background: #DD3A45;
+    color:#FFDCDA;
+    border-radius: 30px;
+}
+
+#inp-id,#inp-id-delete{
+    margin: 10px 0 20px 0;
+    padding: 14px 12px;
+}
+
+.getAllPizzas,.getById,.delete-pizza,.create-pizza,.update-pizza {
+    /*background: gray;*/
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.ssdad{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.pizza-container{
+    overflow: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap:14px;
+    padding: 4px;
+    padding-bottom: 10px;
+    /* Para Firefox */
+    scrollbar-width: none;
+
+    /* Para Internet Explorer y Edge antiguo */
+    -ms-overflow-style: none;
+}
+.tarjeta-pizza {
+    display: inline-block;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    min-height: 100px;
+    min-width: 180px;
+    max-width: 240px;
+    box-shadow: 0 0 3px 2px gray;
+}
+
+p{
+    border-top:1px solid black;
+    padding: 10px 0 ;
+}
+
+.algo{
+    display: none;
+}
