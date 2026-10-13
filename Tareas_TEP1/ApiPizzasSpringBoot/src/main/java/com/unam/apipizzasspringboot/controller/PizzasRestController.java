@@ -14,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/pizzas")
+@CrossOrigin(origins = "*")
 public class PizzasRestController {
     @Autowired
     IPIzzaService service;

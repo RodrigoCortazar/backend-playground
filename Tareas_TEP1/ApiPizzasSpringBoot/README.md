@@ -10,8 +10,8 @@ Dentro de repository se hace uso de arrays y listas para simular la persistencia
 ```bash
 git clone <EsteRepo>
 cd backend-playground/Tareas_TEP1/ApiPizzasSpringBoot
-
-Mas instrucciones pendientes de editar...
+chmod u+x mvnw
+./mvnw spring-boot:run
 ```
 
 
