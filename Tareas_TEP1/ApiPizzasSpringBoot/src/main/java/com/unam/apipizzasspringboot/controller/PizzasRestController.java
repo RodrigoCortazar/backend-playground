@@ -58,10 +58,21 @@ public class PizzasRestController {
         }
     }
 
-    @PostMapping
+    @PostMapping("/create")
     public ResponseEntity<?> createPizza(@RequestBody PizzaDTO pizzaDTO){
-        
-        return null;
+        //System.out.println(pizzaDTO);
+        service.createPizza(pizzaDTO);
+        return ResponseEntity
+                  .status(HttpStatus.ACCEPTED)
+                  .body("Pizza Creada");
+
+    }
+
+    @GetMapping("/tamanios")
+    public ResponseEntity<?> getTamanios(){
+        return ResponseEntity
+                .status(200)
+                .body(service.getTamanios());
     }
 
 }

@@ -12,11 +12,29 @@ public class PizzaRepository implements IPizzaRepository {
     // Simulacion de Persistencia mediante ArrayList
     ArrayList<Tamanio> tamaniosArray = new ArrayList<>(
             List.of(
-                    new Tamanio(1L,"Chica"),
-                    new Tamanio(2L,"Mediana"),
-                    new Tamanio(3L,"Grande")
+                    new Tamanio(1L, "Chica"),
+                    new Tamanio(2L, "Mediana"),
+                    new Tamanio(3L, "Grande")
             )
     );
+    @Override
+    public ArrayList<Tamanio> getCopyTamanios(){
+        return new ArrayList<Tamanio>(tamaniosArray);
+    }
+
+    @Override
+    public Tamanio createTamanio(Tamanio tamanio) {
+        Tamanio tam = tamanio;
+        tamaniosArray.add(tam);
+        return tam;
+    }
+
+    @Override
+    public List<Tamanio> getTamanios() {
+        return tamaniosArray;
+    }
+
+
     ArrayList<Pizza> pizzasArray = new ArrayList<Pizza>(
             List.of(
                     new Pizza(
@@ -26,8 +44,8 @@ public class PizzaRepository implements IPizzaRepository {
                             tamaniosArray
                                     .stream()
                                     .filter(
-                                            ta->
-                                                    ta.getNombre()=="Chica"
+                                            ta ->
+                                                    ta.getNombre() == "Chica"
                                     ).findFirst().orElse(null),
                             100f
                     ),
@@ -38,8 +56,8 @@ public class PizzaRepository implements IPizzaRepository {
                             tamaniosArray
                                     .stream()
                                     .filter(
-                                            ta->
-                                                    ta.getNombre()=="Mediana"
+                                            ta ->
+                                                    ta.getNombre() == "Mediana"
                                     ).findFirst().orElse(null),
                             150f
                     ),
@@ -50,8 +68,8 @@ public class PizzaRepository implements IPizzaRepository {
                             tamaniosArray
                                     .stream()
                                     .filter(
-                                            ta->
-                                                    ta.getNombre()=="Chica"
+                                            ta ->
+                                                    ta.getNombre() == "Chica"
                                     ).findFirst().orElse(null),
                             100f
                     ),
@@ -62,8 +80,8 @@ public class PizzaRepository implements IPizzaRepository {
                             tamaniosArray
                                     .stream()
                                     .filter(
-                                            ta->
-                                                    ta.getNombre()=="Grande"
+                                            ta ->
+                                                    ta.getNombre() == "Grande"
                                     ).findFirst().orElse(null),
                             200f
                     ),
@@ -74,15 +92,15 @@ public class PizzaRepository implements IPizzaRepository {
                             tamaniosArray
                                     .stream()
                                     .filter(
-                                            ta->
-                                                    ta.getNombre()=="Mediana"
+                                            ta ->
+                                                    ta.getNombre() == "Mediana"
                                     ).findFirst().orElse(null),
                             160f
                     )
             )
     );
 
-    public ArrayList<Pizza> getPizzasRepo(){
+    public ArrayList<Pizza> getPizzasRepo() {
         return pizzasArray;
     }
 
@@ -91,12 +109,17 @@ public class PizzaRepository implements IPizzaRepository {
         return pizzasArray
                 .stream()
                 .filter(
-                        pizza -> pizza.getId()==id
+                        pizza -> pizza.getId() == id
                 ).findFirst().orElse(null);
     }
 
     @Override
     public boolean deletePizzaById(Long id) {
-        return pizzasArray.removeIf(p->p.getId()==id);
+        return pizzasArray.removeIf(p -> p.getId() == id);
+    }
+
+    @Override
+    public void createPizza(Pizza pizza) {
+        pizzasArray.add(pizza);
     }
 }
