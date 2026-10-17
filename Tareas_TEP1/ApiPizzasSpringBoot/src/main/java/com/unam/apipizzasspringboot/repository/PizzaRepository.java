@@ -109,7 +109,7 @@ public class PizzaRepository implements IPizzaRepository {
         return pizzasArray
                 .stream()
                 .filter(
-                        pizza -> pizza.getId() == id
+                        pizza -> pizza.getId().equals(id)
                 ).findFirst().orElse(null);
     }
 

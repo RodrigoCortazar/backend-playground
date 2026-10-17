@@ -58,8 +58,10 @@ public class PizzaService implements IPIzzaService{
     private boolean parametrosCompletos(PizzaDTO pizzaDTO){
         if(pizzaDTO.getId()==null || pizzaDTO.getDescripcion()==null || pizzaDTO.getNombre()==null ||
                 pizzaDTO.getTamanio()==null || pizzaDTO.getPrecio()==0.0){
+                    System.out.println("Parametros incompletos");
             return false;
         }
+        System.out.println("Parametros completos");
         return true;
     }
 
@@ -70,9 +72,13 @@ public class PizzaService implements IPIzzaService{
 
     @Override
     public void createPizza(PizzaDTO pizzaDTO) {
-
+        System.out.println("Metodo create");
         if(parametrosCompletos(pizzaDTO)){
+            System.out.println("si entro");
+            System.out.println("ID recibido: " + pizzaDTO.getId());
+System.out.println("Pizza encontrada: " + repository.getPizzaById(pizzaDTO.getId()));
             if(repository.getPizzaById(pizzaDTO.getId())!=null){
+                System.out.println(repository.getPizzaById(pizzaDTO.getId()));
                 throw new UnsupportedOperationException("Ya existe pizza con ese id");
             }
 

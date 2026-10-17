@@ -36,7 +36,12 @@ Endpoints usados:
 
 ### POST
 
-En desarroyo
+Endpoints usados:
+
+- `/api/v1/pizzas/create`
+
+![delete](screenshots/post.gif)
+
 
 ### PUT
 
@@ -45,13 +50,6 @@ En desarroyo...
 
 
 
+# Api Clientes
 
-
-# Api Clientes (En desarroyo)
-
-...
-
-# Api Bebidas (En desarroyo)
-
-...
 
